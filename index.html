@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Animation</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
     <style>
         .page {
             height: 700px;
@@ -32,19 +32,19 @@
         
         #circle {
             height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            background: yellow;
+            width: 1000px;
         }
     </style>
 </head>
 
 <body>
-    <div id="box">
+    <!-- <div id="box">
 
-    </div>
+    </div> -->
     <div class="page" id="page">
-        <div id="circle"></div>
+        <div id="circle">
+            <div class="circle" style="height:100px;width:100px;border-radius: 50%;background-color:rgb(190, 44, 44);opacity: 0 ;"></div>
+        </div>
         <div class="boxes">
             <div class="box js-box"></div>
             <div class="box js-box"></div>
@@ -56,7 +56,8 @@
     <script src='./animation.js'>
     </script>
     <script>
-        document.getElementById('play').addEventListener('click', myAnim.play);
+        //document.getElementById('play').addEventListener('click', myAnim.play);
+        document.getElementById('play').addEventListener('click', elasticAnim.restart);
     </script>
 </body>
 
