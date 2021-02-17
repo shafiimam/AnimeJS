@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous"></script>
+    <style>
+        .page {
+            height: 700px;
+            width: 100%;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+        }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 10px;
+        }
+        
+        #circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <div class="page" id="page">
+        <div id="circle"></div>
+        <div class="boxes">
+            <div class="box js-box"></div>
+            <div class="box js-box"></div>
+        </div>
+        <div class="play">
+            <button id="play">play</button>
+        </div>
+    </div>
+    <script src='./animation.js'>
+    </script>
+    <script>
+        document.getElementById('play').addEventListener('click', myAnim.play);
+    </script>
+</body>
+
+</html>
